@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>ゲームページ</title>
+  <meta charset="UTF-8">
+  <title>フルスクリーン埋め込み</title>
   <style>
-    /* ページ全体を埋めるスタイル */
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       width: 100%;
-      overflow: hidden; /* スクロールバーを消す */
+      height: 100%;
+      overflow: hidden;
+      background: black;
     }
-    iframe {
-      border: none;       /* 枠線を消す */
-      width: 100vw;       /* ビューポート幅いっぱい */
-      height: 100vh;      /* ビューポート高さいっぱい */
+    #gameFrame {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://example.com"></iframe>
+  <iframe id="gameFrame"
+    src="https://educational.radissontucson.com/"
+    allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
 </body>
 </html>
